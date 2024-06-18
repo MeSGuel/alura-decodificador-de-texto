@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(177, 207, 152);
+    min-height: 100vh;
+}
+
+
+/* CABEÇALHO */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.cabecalho h1 {
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.192);
+}
+
+/* CABEÇALHO - LOGO DA ALURA */
+.cabecalho__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+
+    position: fixed;
+    top: 25px;
+    left: 20px;
+
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.cabecalho__img:hover {
+    background-color: rgba(240, 248, 255, 0.664);
+}
+
+.cabecalho__img:active {
+    width: 68px;
+    height: 68px;
+    background-color: rgba(240, 248, 255, 0.452);
+}
+
+.cabecalho__img img {
+    height: 35px;
+    transition: 0.1s;
+}
+
+.cabecalho__img:active img {
+    height: 33px;
+}
+
+/* CABEÇALHO - MENU DE NAVEGACAO */
+.cabecalho__menu {
+    position: absolute;
+    top: 90px;
+}
+
+.menu__item {
+    font-family: "Tilt Neon", sans-serif;
+    display: inline-block;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    padding: 0 20px;
+
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    border-top: 2px solid rgba(0, 0, 0, 0.192);
+    border-left: 2px solid rgba(0, 0, 0, 0.192);
+    box-shadow: 2px 4px 0 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.185);
+}
+
+.menu__item:hover {
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+.menu__item:active {
+    font-size: 1.5em;
+}
+
+
+/* DECODIFICAÇÃO */
+.secao__decodificao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 80px 30px;
+}
+
+.secao__cripto, 
+.secao__descripto {
+    flex: 4;
+    height: 400px;
+
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 1px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.secao__descripto {
+    flex: 2;
+}
+
+.secao__cripto textarea, 
+.secao__descripto textarea {
+    width: 100%;
+    height: 90%;
+
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1.5em;
+    resize: none;
+}
+
+.botoes {
+    display: flex;
+    margin: 0 15px;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 0;
+
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 1em;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.582);
+    box-shadow: 2px 2px 0 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background-color: #B1CF98;
+    font-weight: 900;
+}
+
+.botoes button:active {
+    background-color: rgb(63, 92, 68);
+    color: white;
+    font-weight: 500;
+}
+
+/* DECODIFICAÇÃO - ANIMAÇÃO DE ESPERA */
+.shiba {
+    background-image: url('../assets/shiba.png');
+    background-position: center 60px;
+    background-repeat: no-repeat;
+
+    animation-name: shiba;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-iteration-count: infinite;
+}
+
+.secao__descripto:hover .shiba {
+    background-image: none;
+}
+
+.shiba:focus {
+    background-image: none;
+}
+
+@keyframes shiba{
+    0% {
+        background-position: center 60px;
+    }
+
+    50% {
+        background-position: center 40px;
+    }
+
+    100% {
+        background-position: center 60px;
+    }
+}
+
+/* DECODIFICACAO - LISTA */
+.secao__lista {
+    height: 220px;
+    padding: 10px;
+    
+    background-color: rgb(255, 255, 199);
+    border-top-right-radius: 5px;
+    box-shadow: 3px 3px 1px 2px rgba(0, 0, 0, 0.1);
+    border-right: 10px solid rgb(80, 75, 75);
+
+    transition: 0.2s;
+}
+
+.secao__lista-itens h3 {
+    text-align: center;
+}
+
+.secao__lista-itens {
+    padding: 10px 25px;
+}
+
+.secao__lista-itens li {
+    list-style-type: circle;
+    word-spacing: 20px;
+    padding: 4px 0;
+}
+
+/* DECODIFICACAO - TEXTO DE AVISO  */
+.texto__aviso {
+    flex: 1 100%;
+    font-weight: 700;
+}
+
+.texto__aviso i {
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 56, 85);
+    box-shadow: 2px 2px 0 1px rgba(0, 0, 0, 0.2);
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+
+.text--invertido {
+    color: red;
+}
+
+.text--invertido i {
+    background-color: rgb(172, 65, 65);
+    color: white;
+}
+
+
+
+/* RODAPÉ */
+.rodape {
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.192);
+}
+
+.rodape p:last-child {
+    font-size: 0.9em;
+    padding-top: 5px;
+}
+
+
+/* MEDIAS */
+@media (max-width: 975px) {
+    .secao__decodificao {
+        padding: 80px 15px;
+    }
+    
+    .secao__cripto, .secao__descripto {
+        height: 300px;
+    }
+
+    .secao__cripto {
+        flex: 1 100%;
+    }
+
+    .secao__descripto {
+        flex: 1;
+    }
+    
+    .secao__cripto textarea, 
+    .secao__descripto textarea {
+        height: 85%;
+    }
+
+    .shiba {
+        background-image: none;
+        animation: none;
+    }
+
+    .rodape {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 756px) {
+    .cabecalho {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2.7em;
+        padding-top: 35px;
+        font-weight: 400;
+    }
+
+    .cabecalho__img {
+        position: static;
+    }
+
+    .cabecalho__menu {
+        position: static;
+        order: -1;
+
+    }
+}
+
+@media (max-width: 528px) {
+    .cabecalho h1 {
+        font-size: 2.5em;
+        letter-spacing: 1px;
+    }
+
+    .rodape {
+        font-size: 2em;
+    }
+    
+    .rodape p:last-child {
+        font-size: 0.8em;
+        font-weight: 100;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 518px) {
+    .secao__lista {
+        order: -1;
+    }
+}
+
+@media (max-width: 368px) {
+    .cabecalho {
+        padding: 20px 2px;
+    }
+
+    .cabecalho h1 {
+        font-weight: 100;
+    }
+
+    .texto__aviso {
+        text-align: center;
+    }
+    
+    .texto__aviso i {
+        display: block;
+        width: 32px;
+        margin: 10px auto;
+    }
+
+    .secao__cripto,
+    .secao__descripto {
+        padding: 0;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .rodape {
+        font-size: 1.8em;
+    }
+    
+    .rodape p:last-child {
+        font-size: 0.8em;
+        font-weight: 100;
+    }
+}
