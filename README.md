@@ -6,10 +6,6 @@ Um decoficador e codificador de texto, nele há uma lista de caracteres codifica
 
 ***Como eu gosto de um pouco de originalidade, eu aproveitei e fiz um visual diferente, e adicionei algumas featurestambém.***
 
-### Github Pages:
-[Decodificador de Texto](https://mesguel.github.io/alura-decodificador-de-texto/)
-
-
 ## Linguagens Usadas
 + HTML
 + CSS
