@@ -10,7 +10,7 @@ function gerarRgbAleatorio() {
     let rgbAleatorio;
 
     for(let i = 0; i < 3; i++) {
-        rgbAleatorio = Math.floor(Math.random() * 256);
+        rgbAleatorio = Math.floor(Math.random() * 250);
     }
 
     return rgbAleatorio;
